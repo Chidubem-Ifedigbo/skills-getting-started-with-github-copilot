@@ -87,13 +87,42 @@ section h3 {
 }
 
 .participants-section ul {
-  list-style-position: inside;
-  padding-left: 20px;
+  /* hide default bullets and padding for a cleaner inline layout */
+  list-style: none !important;
+  margin: 0 !important;
+  padding-left: 0 !important;
 }
 
 .participants-section li {
   margin-bottom: 6px;
   color: #555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.delete-btn:hover {
+  background-color: rgba(198,40,40,0.08);
+}
+
+/* make the delete icon itself slightly larger and clearly visible */
+.delete-icon {
+  font-size: 14px;
+  line-height: 1;
+  display: inline-block;
 }
 
 .participants-section em {
